@@ -1,10 +1,18 @@
+// next js import
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+// font import
+import { Poppins } from 'next/font/google';
+// css import
 import './globals.css';
+// mantine import
 import '@mantine/core/styles.css';
 import { createTheme, MantineProvider, ColorSchemeScript } from '@mantine/core';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'PJU Monitoring System PENS',
@@ -29,7 +37,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript defaultColorScheme='auto' />
       </head>
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <MantineProvider
           theme={theme}
           defaultColorScheme='auto'
