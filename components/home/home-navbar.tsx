@@ -4,7 +4,7 @@ import React from 'react';
 import { AppShell, Burger, Group, UnstyledButton, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 // data import
-import { homeNavbarLinks } from '@/data/home-navber-links';
+import { homeNavbarLinks } from '@/libs/links';
 // next js import
 import Link from 'next/link';
 // components import
