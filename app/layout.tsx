@@ -6,6 +6,7 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 // mantine import
 import '@mantine/core/styles.css';
+import '@mantine/charts/styles.css';
 import { createTheme, MantineProvider, ColorSchemeScript } from '@mantine/core';
 
 const poppins = Poppins({
