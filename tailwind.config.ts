@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        subTitle : "#8B8D98",
+      },
+      // fontFamily: {
+      //   SamsungSharpSans: ['Samsung Sharp Sans', 'sans-serif'],
+      // },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
