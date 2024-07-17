@@ -75,7 +75,9 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
             <Header />
           </div>
         </div>
-        <div>{children}</div>
+        <div className='pt-4'>
+          {children}
+        </div>
       </AppShell.Main>
     </AppShell>
   );
