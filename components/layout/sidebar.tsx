@@ -65,24 +65,26 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
         <div className='mt-6'>
           {dashboardSidebarLinks.map((link, i) => (
             <>
-              <NavLink
-                key={i}
-                label={link.label}
-                component='button'
-                leftSection={link.icon}
-                active={checkActiveLink(link.href)}
-                onClick={() => handleLinkClick(link.href)}
-                className='block lg:hidden'
-              />
-              <NavLink
-                key={i}
-                label={link.label}
-                component={Link}
-                href={link.href}
-                leftSection={link.icon}
-                active={checkActiveLink(link.href)}
-                className='hidden lg:block'
-              />
+              <div className='block lg:hidden'>
+                <NavLink
+                  key={i}
+                  label={link.label}
+                  component='button'
+                  leftSection={link.icon}
+                  active={checkActiveLink(link.href)}
+                  onClick={() => handleLinkClick(link.href)}
+                />
+              </div>
+              <div className='hidden lg:block'>
+                <NavLink
+                  key={i}
+                  label={link.label}
+                  component={Link}
+                  href={link.href}
+                  leftSection={link.icon}
+                  active={checkActiveLink(link.href)}
+                />
+              </div>
             </>
           ))}
         </div>
