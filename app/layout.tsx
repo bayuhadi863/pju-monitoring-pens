@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
-        <ColorSchemeScript defaultColorScheme='auto' />
+        <ColorSchemeScript />
       </head>
       <body className={poppins.className}>
         <MantineProvider
