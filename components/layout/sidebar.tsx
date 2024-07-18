@@ -11,13 +11,19 @@ import Header from '../dashboard/header';
 import { dashboardSidebarLinks } from '@/libs/links';
 // next js import
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
   const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
 
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLinkClick = (route: string) => {
+    router.push(route);
+    toggleMobile();
+  };
 
   const checkActiveLink = (path: string) => {
     if (pathname === path) return true;
@@ -58,14 +64,26 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
         </div>
         <div className='mt-6'>
           {dashboardSidebarLinks.map((link, i) => (
-            <NavLink
-              key={i}
-              label={link.label}
-              component={Link}
-              href={link.href}
-              leftSection={link.icon}
-              active={checkActiveLink(link.href)}
-            />
+            <>
+              <NavLink
+                key={i}
+                label={link.label}
+                component='button'
+                leftSection={link.icon}
+                active={checkActiveLink(link.href)}
+                onClick={() => handleLinkClick(link.href)}
+                className='block lg:hidden'
+              />
+              <NavLink
+                key={i}
+                label={link.label}
+                component={Link}
+                href={link.href}
+                leftSection={link.icon}
+                active={checkActiveLink(link.href)}
+                className='hidden lg:block'
+              />
+            </>
           ))}
         </div>
       </AppShell.Navbar>
