@@ -41,7 +41,6 @@ export default function RootLayout({
       <body className={poppins.className}>
         <MantineProvider
           theme={theme}
-          defaultColorScheme='auto'
         >
           {children}
         </MantineProvider>
