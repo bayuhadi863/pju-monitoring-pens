@@ -1,5 +1,5 @@
 import { LineChart } from '@mantine/charts';
-import React from 'react'
+import React from 'react';
 
 const data = [
   { name: '10.06.19', Humidity: 100, Temperature: 24 },
@@ -14,12 +14,12 @@ const data = [
 function ChartLineWeather() {
   return (
     <LineChart
-      h={300}
+      h={100}
       data={data}
-      dataKey="name"
+      dataKey='name'
       withRightYAxis
-      yAxisLabel="Humidity [rH %]"
-      rightYAxisLabel="Temperature [°C]"
+      yAxisLabel='Humidity [rH %]'
+      rightYAxisLabel='Temperature [°C]'
       series={[
         { name: 'Humidity', color: 'red.6' },
         { name: 'Temperature', color: 'cyan.4', yAxisId: 'right' },
@@ -28,4 +28,4 @@ function ChartLineWeather() {
   );
 }
 
-export default ChartLineWeather
+export default ChartLineWeather;

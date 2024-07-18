@@ -35,7 +35,12 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
     >
       <AppShell.Navbar p='md'>
         <div className='flex justify-between'>
-          <h3 className='text-2xl font-semibold'>Logo</h3>
+          <Link
+            href='/'
+            className='text-2xl font-semibold'
+          >
+            Logo
+          </Link>
           <Group h='100%'>
             <Burger
               opened={mobileOpened}
@@ -65,7 +70,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
         </div>
       </AppShell.Navbar>
       <AppShell.Main>
-        <div className='flex items-center'>
+        <div className='flex items-center gap-2 lg:gap-0'>
           <div>
             <Group h='100%'>
               <Burger

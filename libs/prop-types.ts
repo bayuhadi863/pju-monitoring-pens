@@ -4,4 +4,5 @@ export type SensorCardPropsType = {
   value: number;
   unit?: string;
   color?: string;
+  icon?: any;
 };

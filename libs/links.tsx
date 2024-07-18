@@ -39,12 +39,12 @@ export const dashboardSidebarLinks: DashboardSidebarLinksType[] = [
     icon: <RiDashboardFill />,
   },
   {
-    label: 'Sensor Cuaca',
+    label: 'Weather',
     href: '/dashboard/weather',
     icon: <BsFillCloudsFill />,
   },
   {
-    label: 'Sensor Kualitas Udara',
+    label: 'Air Quality',
     href: '/dashboard/air',
     icon: <FaWind />,
   },
